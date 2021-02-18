@@ -1,0 +1,18 @@
+// VARIABLES Y MAPS
+$colors:(
+    background: rgba(180, 219, 255, 0.241),
+    btnNav: rgba(201, 237, 231, 0.618),
+    btnNavHover: rgba(146, 238, 226, 0.693),
+    shadow: rgba(0, 0, 0, 0.179),
+    shadowPhoto: rgba(19, 213, 187, 0.693),
+    card: rgb(255, 255, 255),
+    footer: #3381b1,
+    footerCopy:  skyblue,
+
+);
+
+// FUNCIONES Y MIXINS
+
+@function color ($colorName){
+    @return map-get($colors, $colorName )
+}

@@ -1,0 +1,268 @@
+ //import de partial con maps y funciones
+@import 'base';
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Signika', sans-serif;
+    
+}
+body {
+    overflow-x: hidden;
+    .layoutContainer{
+        background-color: color(background);
+    }
+}
+
+
+
+// NAVEGACION Y BANNER 
+
+.header__container{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    background: url(../../img/banner2.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    box-shadow: 0 10px 12px color(shadow);
+}
+
+.topLogo {
+    height: 75px;
+    width: auto;
+    position: relative;
+    top: 13px;
+    left: 3em;
+}
+
+.navegation {
+    position: relative;
+    top: 70px;
+    &__list {
+        position: relative; 
+        left: 50%; 
+        transform: translatex(-50%); 
+    }
+    
+
+    &__list__element{
+        background-color: color(btnNav);
+        border-radius: 3%;
+        padding: 0.3em 0.6em;
+        margin: 0 1.5em;
+        z-index: 2;
+        width: 10.3rem;
+        height: 3.5rem;
+        text-align: center;
+        box-shadow: 3px 3px 10px color(shadow);
+        &:hover{      
+            background-color: color(btnNavHover);
+        }
+    }
+    &__list__link {
+        font-size: 22px;
+    }
+    
+}
+
+
+
+/* CUERPO DEL SITIO */
+.row{
+    margin: 2em auto;
+}
+/* Carousel */
+.carousel__image{
+    width: 100%;
+    height: 70vh;
+    border-radius: 1%;
+}
+
+/* Custom cards */
+
+
+.main__card {
+    border-radius: 3%;
+    box-shadow: 0 5px 12px color(shadow);
+    &__image {
+        border-radius: 12%;
+        margin: 1em auto;
+        height: auto;
+        width: 12em;
+        box-shadow:3px 3px color(shadowPhoto);
+    }
+
+    &--color{
+        background-color: color(card);
+    }
+}
+
+/* Cajas FLEXBOX servicios */
+.containerServicios{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 4em 0;
+    align-items: center;
+
+}
+
+.cajaServicio{
+    background-color: #1f878cac;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px color(shadow);
+    width: 65%;
+    font-size: 35px;
+    font-family: 'Signika', sans-serif;
+    color: #172a3d;
+    transition: background-color 1s , width 2s , height 2s;
+
+    div{
+    
+        position:absolute;
+        opacity: 0;
+        font-size: 20px;
+        text-align: justify;
+    
+    }
+
+    &:hover{
+        background-color: #73c3c6ac;
+        width: 75%;
+        div {
+            position: static;
+            opacity: 1;
+            transition: opacity 2s linear;
+        }
+    }
+}
+
+.containerTextBox {
+    margin: 2em 12%;
+    .title{
+        text-align: center;
+        font-size: 3em;
+    }
+    .paragraph{
+        text-align: center;
+        font-size: 1.3em;
+    }
+   
+}
+
+/*SECCION DE CONTACTO*/
+.containerContact {
+    display: flex;
+    justify-content: center;
+}
+.contact__map{
+    width: 90vw;
+    box-shadow: 5px 5px 10px color(shadow);
+    border-radius: 2%;
+}
+
+/* FOOTER */
+
+.footer {
+    color: white;
+    background-color: color(footer);
+    padding: 1.8rem 3rem 1rem 3rem;
+    box-shadow: 0 -5px 12px color(shadow);
+    display: grid;
+    grid-template-areas: "links social"
+                         "copy copy";
+
+   
+
+    &__list {
+        list-style: none;
+        margin-bottom: 10px;
+        grid-area: links;
+    }
+
+    #copyrgt {
+        grid-area: copy;
+        text-align: center;
+        color: color(footerCopy);
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+    &__social{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-area: social;
+    }
+    &__social__element{
+        
+        margin: 1.5em 0.5em;
+        font-size: 2.3em;
+    }
+}
+
+
+
+/* MEDIA QUERIES Y AJUSTES RESPONSIVE */
+
+/* // Small devices*/
+@media (max-width: 767px) {
+    .carousel__image{
+        height: 35vh;
+    }
+    .topLogo {
+        top: 13px;
+        left: 0.5em;
+    }
+    .header__container{
+        height: 220px;
+    }
+    .footer{
+        grid-template-areas: "links"
+                             "social"
+                             "copy";
+        &__social{
+             justify-content: center;
+             
+        }
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .carousel__image{
+        height: 50vh;
+    }
+
+    .header__container{
+        height: 220px;
+    }
+   
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .carousel__image{
+        width: 90%;
+        height: 80vh;
+        margin: 0 0 0 5%;
+    }
+
+    .topLogo{
+        height: 100px;
+    }
+
+    .header__container{
+        height: 300px;
+    }
+    
+    .contact__map{
+        width: 100%;
+    }
+}
