@@ -1,268 +1,333 @@
- //import de partial con maps y funciones
-@import 'base';
+//import de partial con maps y funciones
+@import "base";
 
 // RESET
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    font-family: 'Signika', sans-serif;
-    
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Signika", sans-serif;
 }
 body {
-    overflow-x: hidden;
-    .layoutContainer{
-        background-color: color(background);
-    }
+  overflow-x: hidden;
+  .layoutContainer {
+    background-color: color(background);
+  }
 }
 
+// NAVEGACION Y BANNER
 
-
-// NAVEGACION Y BANNER 
-
-.header__container{
-    height: 300px;
-    width: 100%;
-    position: relative;
-    background: url(../../img/banner2.jpg);
-    background-repeat: no-repeat;
-    background-position: center ;
-    background-size: cover;
-    box-shadow: 0 10px 12px color(shadow);
+.header__container {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(../../img/banner2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 10px 12px color(shadow);
 }
 
 .topLogo {
-    height: 75px;
-    width: auto;
-    position: relative;
-    top: 13px;
-    left: 3em;
+  height: 75px;
+  width: auto;
+  position: relative;
+  top: 13px;
+  left: 3em;
 }
 
 .navegation {
+  position: relative;
+  top: 70px;
+  &__list {
     position: relative;
-    top: 70px;
-    &__list {
-        position: relative; 
-        left: 50%; 
-        transform: translatex(-50%); 
-    }
-    
+    left: 50%;
+    transform: translatex(-50%);
+  }
 
-    &__list__element{
-        background-color: color(btnNav);
-        border-radius: 3%;
-        padding: 0.3em 0.6em;
-        margin: 0 1.5em;
-        z-index: 2;
-        width: 10.3rem;
-        height: 3.5rem;
-        text-align: center;
-        box-shadow: 3px 3px 10px color(shadow);
-        &:hover{      
-            background-color: color(btnNavHover);
-        }
+  &__list__element {
+    background-color: color(btnNav);
+    border-radius: 3%;
+    padding: 0.3em 0.6em;
+    margin: 0 1.5em;
+    z-index: 2;
+    width: 10.3rem;
+    height: 3.5rem;
+    text-align: center;
+    box-shadow: 3px 3px 10px color(shadow);
+    &:hover {
+      background-color: color(btnNavHover);
     }
-    &__list__link {
-        font-size: 22px;
-    }
-    
+  }
+  &__list__link {
+    font-size: 22px;
+  }
 }
-
-
 
 /* CUERPO DEL SITIO */
-.row{
-    margin: 2em auto;
+.row {
+  margin: 2em auto;
 }
 /* Carousel */
-.carousel__image{
-    width: 100%;
-    height: 70vh;
-    border-radius: 1%;
+.carousel__image {
+  width: 100%;
+  height: 70vh;
+  border-radius: 1%;
 }
 
 /* Custom cards */
 
-
 .main__card {
-    border-radius: 3%;
-    box-shadow: 0 5px 12px color(shadow);
-    &__image {
-        border-radius: 12%;
-        margin: 1em auto;
-        height: auto;
-        width: 12em;
-        box-shadow:3px 3px color(shadowPhoto);
-    }
+  border-radius: 3%;
+  box-shadow: 0 5px 12px color(shadow);
+  &__image {
+    border-radius: 12%;
+    margin: 1em auto;
+    height: auto;
+    width: 12em;
+    box-shadow: 3px 3px color(shadowPhoto);
+  }
 
-    &--color{
-        background-color: color(card);
-    }
+  &--color {
+    background-color: color(card);
+  }
 }
 
 /* Cajas FLEXBOX servicios */
-.containerServicios{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    padding: 10px;
-    margin: 4em 0;
-    align-items: center;
-
+.containerServicios {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 4em 0;
+  align-items: center;
 }
 
-.cajaServicio{
-    background-color: #1f878cac;
-    padding: 30px;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px color(shadow);
-    width: 65%;
-    font-size: 35px;
-    font-family: 'Signika', sans-serif;
-    color: #172a3d;
-    transition: background-color 1s , width 2s , height 2s;
+.cajaServicio {
+  background-color: color(element);
+  padding: 30px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px color(shadow);
+  width: 65%;
+  font-size: 35px;
+  font-family: "Signika", sans-serif;
+  color: color(text);
+  transition: background-color 1s, width 2s, height 2s;
 
-    div{
-    
-        position:absolute;
-        opacity: 0;
-        font-size: 20px;
-        text-align: justify;
-    
-    }
+  div {
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    text-align: justify;
+  }
 
-    &:hover{
-        background-color: #73c3c6ac;
-        width: 75%;
-        div {
-            position: static;
-            opacity: 1;
-            transition: opacity 2s linear;
-        }
+  &:hover {
+    background-color: color(elementHover);
+    width: 75%;
+    div {
+      position: static;
+      opacity: 1;
+      transition: opacity 2s linear;
     }
+  }
 }
 
 .containerTextBox {
-    margin: 2em 12%;
-    .title{
-        text-align: center;
-        font-size: 3em;
-    }
-    .paragraph{
-        text-align: center;
-        font-size: 1.3em;
-    }
-   
+  margin: 2em 12%;
+  .title {
+    text-align: center;
+    font-size: 3em;
+  }
+  .paragraph {
+    text-align: center;
+    font-size: 1.3em;
+  }
 }
-
-/*SECCION DE CONTACTO*/
+// SECCION NOSOTROS
+.nosotros{
+  &__card {
+    display: block;
+    margin: 4rem 0;
+    padding: 4rem;
+    width: 100%;
+    height: auto;
+    background-color: color(btnNav);
+    &__text {
+      width: 100%;
+      text-align: center;
+      color: color(text);
+    }
+    &__elements {
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: space-around;
+      margin-top: 4rem;
+    }
+    &__title{
+      font-size: 3rem;
+    }
+    &__button {
+      background-color: color(element);
+      padding: 2rem 4rem;
+      margin: 1rem 0.5rem;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px color(shadow);
+      text-align: center;
+      
+      a {
+        color: color(text);
+        font-size: 1.8rem;
+        font-family: "Signika", sans-serif;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  &__texts{
+    text-align: justify;
+    margin: 0em 6em;
+    &__elements{
+      margin: 7rem 0;
+    }
+    h2{
+      position: relative;
+      top: 10px;
+      padding: 0.5rem 1rem;
+      background-color:  rgb(157, 241, 230);
+      width: 9rem;
+      border-top-left-radius: 10%;
+      border-top-right-radius: 10%;
+      box-shadow: 7px 0px 0px color(shadow);
+      z-index: 1;
+    }
+    p {
+      background-color: rgb(201, 237, 231);
+      padding: 2em;
+      border-top-right-radius: 3%;
+      z-index: 2;
+      box-shadow: 10px 10px 0px color(shadow);
+    }
+  }
+}
+//SECCION DE CONTACTO
 .containerContact {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.contact__map{
-    width: 90vw;
-    box-shadow: 5px 5px 10px color(shadow);
-    border-radius: 2%;
+.contact__map {
+  width: 90vw;
+  box-shadow: 5px 5px 10px color(shadow);
+  border-radius: 2%;
 }
 
-/* FOOTER */
+// FOOTER
 
 .footer {
-    color: white;
-    background-color: color(footer);
-    padding: 1.8rem 3rem 1rem 3rem;
-    box-shadow: 0 -5px 12px color(shadow);
-    display: grid;
-    grid-template-areas: "links social"
-                         "copy copy";
+  color: white;
+  background-color: color(footer);
+  padding: 1.8rem 3rem 1rem 3rem;
+  box-shadow: 0 -5px 12px color(shadow);
+  display: grid;
+  grid-template-areas:
+    "links social"
+    "copy copy";
 
-   
+  &__list {
+    list-style: none;
+    margin-bottom: 10px;
+    grid-area: links;
+  }
 
-    &__list {
-        list-style: none;
-        margin-bottom: 10px;
-        grid-area: links;
-    }
-
-    #copyrgt {
-        grid-area: copy;
-        text-align: center;
-        color: color(footerCopy);
-        font-family: sans-serif;
-        font-size: 12px;
-    }
-    &__social{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        grid-area: social;
-    }
-    &__social__element{
-        
-        margin: 1.5em 0.5em;
-        font-size: 2.3em;
-    }
+  #copyrgt {
+    grid-area: copy;
+    text-align: center;
+    color: color(footerCopy);
+    font-family: sans-serif;
+    font-size: 12px;
+  }
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: social;
+  }
+  &__social__element {
+    margin: 1.5em 0.5em;
+    font-size: 2.3em;
+  }
 }
 
+//MEDIA QUERIES Y AJUSTES RESPONSIVE
 
-
-/* MEDIA QUERIES Y AJUSTES RESPONSIVE */
-
-/* // Small devices*/
+// Small devices
 @media (max-width: 767px) {
-    .carousel__image{
-        height: 35vh;
+  .carousel__image {
+    height: 35vh;
+  }
+  .topLogo {
+    top: 13px;
+    left: 0.5em;
+  }
+  .header__container {
+    height: 220px;
+  }
+
+  .footer {
+    grid-template-areas:
+      "links"
+      "social"
+      "copy";
+    &__social {
+      justify-content: center;
     }
-    .topLogo {
-        top: 13px;
-        left: 0.5em;
-    }
-    .header__container{
-        height: 220px;
-    }
-    .footer{
-        grid-template-areas: "links"
-                             "social"
-                             "copy";
-        &__social{
-             justify-content: center;
-             
-        }
-    }
+  }
+  .cajaServicio {
+    font-size: 25px;
+  }
 }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .carousel__image{
-        height: 50vh;
-    }
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+  .carousel__image {
+    height: 50vh;
+  }
 
-    .header__container{
-        height: 220px;
-    }
-   
+  .header__container {
+    height: 220px;
+  }
+
+  .navegation__list__element {
+    background-color: color(btnNavMobile);
+    border-radius: 0;
+    padding: 0.3em 0.6em;
+    margin: 0;
+    width: 40%;
+    height: 3.5rem;
+    text-align: center;
+    box-shadow: none;
+  }
 }
 
-/* // Large devices (desktops, 992px and up) */
+// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .carousel__image{
-        width: 90%;
-        height: 80vh;
-        margin: 0 0 0 5%;
-    }
+  .carousel__image {
+    width: 90%;
+    height: 80vh;
+    margin: 0 0 0 5%;
+  }
 
-    .topLogo{
-        height: 100px;
-    }
+  .topLogo {
+    height: 100px;
+  }
 
-    .header__container{
-        height: 300px;
-    }
-    
-    .contact__map{
-        width: 100%;
-    }
+  .header__container {
+    height: 300px;
+  }
+
+  .contact__map {
+    width: 100%;
+  }
 }

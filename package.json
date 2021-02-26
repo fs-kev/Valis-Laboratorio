@@ -1,0 +1,23 @@
+{
+  "name": "valis-laboratorio",
+  "version": "0.0.1",
+  "description": "website project for DW course at Coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-kev/Valis-Laboratorio.git"
+  },
+  "author": "Kevin Fontalvo Sarmiento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fs-kev/Valis-Laboratorio/issues"
+  },
+  "homepage": "https://github.com/fs-kev/Valis-Laboratorio#readme",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

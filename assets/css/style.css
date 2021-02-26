@@ -136,7 +136,70 @@ body .layoutContainer {
   font-size: 1.3em;
 }
 
-/*SECCION DE CONTACTO*/
+.nosotros__card {
+  display: block;
+  margin: 4rem 0;
+  padding: 4rem;
+  width: 100%;
+  height: auto;
+  background-color: rgba(201, 237, 231, 0.618);
+}
+.nosotros__card__text {
+  width: 100%;
+  text-align: center;
+  color: #172a3d;
+}
+.nosotros__card__elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+.nosotros__card__title {
+  font-size: 3rem;
+}
+.nosotros__card__button {
+  background-color: #1f878cac;
+  padding: 2rem 4rem;
+  margin: 1rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.179);
+  text-align: center;
+}
+.nosotros__card__button a {
+  color: #172a3d;
+  font-size: 1.8rem;
+  font-family: "Signika", sans-serif;
+}
+.nosotros__card__button a:hover {
+  text-decoration: none;
+}
+.nosotros__texts {
+  text-align: justify;
+  margin: 0em 6em;
+}
+.nosotros__texts__elements {
+  margin: 7rem 0;
+}
+.nosotros__texts h2 {
+  position: relative;
+  top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #9df1e6;
+  width: 9rem;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  box-shadow: 7px 0px 0px rgba(0, 0, 0, 0.179);
+  z-index: 1;
+}
+.nosotros__texts p {
+  background-color: #c9ede7;
+  padding: 2em;
+  border-top-right-radius: 3%;
+  z-index: 2;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.179);
+}
+
 .containerContact {
   display: flex;
   justify-content: center;
@@ -148,7 +211,6 @@ body .layoutContainer {
   border-radius: 2%;
 }
 
-/* FOOTER */
 .footer {
   color: white;
   background-color: #3381b1;
@@ -180,8 +242,6 @@ body .layoutContainer {
   font-size: 2.3em;
 }
 
-/* MEDIA QUERIES Y AJUSTES RESPONSIVE */
-/* // Small devices*/
 @media (max-width: 767px) {
   .carousel__image {
     height: 35vh;
@@ -202,9 +262,12 @@ body .layoutContainer {
   .footer__social {
     justify-content: center;
   }
+
+  .cajaServicio {
+    font-size: 25px;
+  }
 }
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 991px) {
   .carousel__image {
     height: 50vh;
   }
@@ -212,8 +275,18 @@ body .layoutContainer {
   .header__container {
     height: 220px;
   }
+
+  .navegation__list__element {
+    background-color: rgba(225, 238, 236, 0.904);
+    border-radius: 0;
+    padding: 0.3em 0.6em;
+    margin: 0;
+    width: 40%;
+    height: 3.5rem;
+    text-align: center;
+    box-shadow: none;
+  }
 }
-/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .carousel__image {
     width: 90%;
