@@ -224,6 +224,13 @@ body .layoutContainer {
   margin-bottom: 10px;
   grid-area: links;
 }
+.footer__list a {
+  color: white;
+}
+.footer__list a:hover {
+  text-decoration: none;
+  color: #ddd9d9;
+}
 .footer #copyrgt {
   grid-area: copy;
   text-align: center;

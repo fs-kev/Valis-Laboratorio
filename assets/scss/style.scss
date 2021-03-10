@@ -239,6 +239,13 @@ body {
     list-style: none;
     margin-bottom: 10px;
     grid-area: links;
+    a {
+      color: white;
+      &:hover{
+        text-decoration: none;
+        color: rgb(221, 217, 217);
+      }
+    }
   }
 
   #copyrgt {
@@ -289,8 +296,8 @@ body {
   }
   .nosotros__texts{
     margin: 0em 2.5em;
-
   }
+
 }
 
 // Medium devices (tablets, 768px and up)
