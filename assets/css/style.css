@@ -86,7 +86,7 @@ body .layoutContainer {
   background-color: white;
 }
 
-/* Cajas FLEXBOX servicios */
+/* Cajas servicios */
 .containerServicios {
   display: flex;
   flex-flow: column nowrap;
@@ -96,7 +96,7 @@ body .layoutContainer {
   align-items: center;
 }
 
-.cajaServicio {
+.servicios__box {
   background-color: #1f878cac;
   padding: 30px;
   margin: 15px;
@@ -108,17 +108,17 @@ body .layoutContainer {
   color: #172a3d;
   transition: background-color 1s, width 2s, height 2s;
 }
-.cajaServicio div {
+.servicios__box div {
   position: absolute;
   opacity: 0;
   font-size: 20px;
   text-align: justify;
 }
-.cajaServicio:hover {
+.servicios__box:hover {
   background-color: #73c3c6ac;
   width: 75%;
 }
-.cajaServicio:hover div {
+.servicios__box:hover div {
   position: static;
   opacity: 1;
   transition: opacity 2s linear;

@@ -93,7 +93,7 @@ body {
   }
 }
 
-/* Cajas FLEXBOX servicios */
+/* Cajas servicios */
 .containerServicios {
   display: flex;
   flex-flow: column nowrap;
@@ -103,7 +103,7 @@ body {
   align-items: center;
 }
 
-.cajaServicio {
+.servicios__box {
   background-color: color(element);
   padding: 30px;
   margin: 15px;
