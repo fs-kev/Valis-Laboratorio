@@ -32,6 +32,13 @@
     <!-- Scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <!-- Splide js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/themes/splide-sea-green.min.css"
+    />
+
     <!-- Tipografias -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -46,13 +53,18 @@
       <!-- Navegación y banner -->
       <header class="header">
         <div class="header__container">
-          <a href="#"><img class="topLogo" src="img/logoSBG2.png" alt="logo" /></a>
+          <a href="#"
+            ><img class="topLogo" src="img/logoSBG2.png" alt="logo"
+          /></a>
           <nav
             class="navegation | navbar navbar-expand-lg navbar-light sticky-top"
           >
             <button
               class="navbar-toggler"
-              style="background-color: rgba(162, 221, 213, 0.426); border: 2px solid rgb(221, 221, 221);"
+              style="
+                background-color: rgba(162, 221, 213, 0.426);
+                border: 2px solid rgb(221, 221, 221);
+              "
               type="button"
               data-toggle="collapse"
               data-target="#navbarNav"
@@ -108,112 +120,119 @@
       <main class="main">
         <!-- Carousel -->
 
-        <div class="row">
-          <div
-            id="demo"
-            class="main__carousel | carousel slide col-10 mx-auto"
-            data-ride="carousel"
-          >
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-              <li data-target="#demo" data-slide-to="2"></li>
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="img/carS1.jpg" alt="" /></li>
+              <li class="splide__slide"><img src="img/carS2.jpg" alt="" /></li>
+              <li class="splide__slide"><img src="img/carS3.jpg" alt="" /></li>
             </ul>
-
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  class="carousel__image"
-                  src="img/carS1.jpg"
-                  alt="Los Angeles"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  class="carousel__image"
-                  src="img/carS2.jpg"
-                  alt="Chicago"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  class="carousel__image"
-                  src="img/carS3.jpg"
-                  alt="New York"
-                />
-              </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
           </div>
         </div>
 
-        <!-- Cards -->
-        <div class="row">
-          <div
-            class="main__card main__card--color | card mx-auto my-3 col-sm-12 col-md-6 col-lg-4"
-          >
-            <div class="main__card__body | card-body text-center">
-              <img
-                src="img/phBorges.jpeg"
-                alt=""
-                class="main__card__image | card-img-top"
-              />
-              <p class="main__card__text | card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                tempora a sit consequatur fugiat! Consequuntur!
-              </p>
-            </div>
+        <!-- Banner 1 -->
+        <div class="banner">
+          <div class="banner__head">
+            <img
+              class="banner__head__image"
+              src="https://e-tinet.com/wp-content/uploads/2018/11/crontab-como-agendar-no-linux-1024x1024.jpg"
+              alt=""
+            />
           </div>
-          <div
-            class="main__card main__card--color | card mx-auto my-3 col-sm-12 col-md-6 col-lg-4"
-          >
-            <div class="main__card__body| card-body text-center">
-              <img
-                src="img/phHesse.jpeg"
-                alt=""
-                class="main__card__image | card-img-top"
-              />
-              <p class="main__card__text | card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-                provident aliquid quia cupiditate itaque modi.
-              </p>
-            </div>
-          </div>
-          <div
-            class="main__card main__card--color | card mx-auto my-3 col-sm-12 col-md-6 col-lg-4"
-          >
-            <div class="main__card__body| card-body text-center">
-              <img
-                src="img/phPhilipKDick.jpeg"
-                alt=""
-                class="main__card__image | card-img-top"
-              />
-              <p class="main__card__text | card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-                suscipit eos aliquam alias beatae impedit?
-              </p>
-            </div>
+          <div class="banner__description">
+            <h3>AGENDA TU CITA</h3>
+            <p>
+              Puedes agendar tu visita a nuestro Laboratorio o hacer una cita para que vayamos a tu domicilio
+            </p>
+            <a href="#" class="banner__button">Agenda aquí</a>
           </div>
         </div>
-      </main>
+
+        
+
+      <!-- banner 2 -->
+      <div class="banner2">
+        <div class="banner2__head">
+          <img
+            class="banner2__head__image"
+            src="https://www-static.weddingbee.com/wp-content/uploads/2019/01/water1-398684-2.png"
+            alt=""
+          />
+        </div>
+        <div class="banner2__description">
+          <h3>Preparacion antes de sus examenes</h3>
+          <p>
+            Descargue un documento en el cual le explicamos las consideraciones basicas a tomar en cuenta antes de realizarse cualquiera de los examenes que ofrecemos
+          </p>
+          <a href="https://www.soundczech.cz/temp/lorem-ipsum.pdf" class="banner2__button">Descargue PDF</a>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="row d-flex justify-content-around">
+        <div
+          class="main__card main__card--color | card d-flex align-items-center mx-3 mb-5  px-5 col-sm-10 col-md-5 col-lg-3"
+        >
+          <div class="main__card__body | card-body text-center">
+            <img
+              src="img/phBorges.jpeg"
+              alt=""
+              class="main__card__image | card-img-top"
+            />
+            <p class="main__card__text | card-text">
+              "Un servicio excelente, con un mejor trato. Se nota la entrega en lo que hacen." <strong>-J.L. Borges</strong>
+            </p>
+          </div>
+        </div>
+        <div
+          class="main__card main__card--color | card d-flex align-items-center mx-3 mb-5  px-5 col-sm-10 col-md-5 col-lg-3"
+        >
+          <div class="main__card__body| card-body text-center">
+            <img
+              src="img/phHesse.jpeg"
+              alt=""
+              class="main__card__image | card-img-top"
+            />
+            <p class="main__card__text | card-text">
+              "Quedé muy contento con el acopañamiento, como resolvieron mis dudas en todo y al final tuve mis resultados muy rapido." <strong>-H. Hesse</strong>
+            </p>
+          </div>
+        </div>
+        <div
+          class="main__card main__card--color | card d-flex align-items-center mx-3 mb-5  px-5 col-sm-10 col-md-5 col-lg-3"
+        >
+          <div class="main__card__body| card-body text-center">
+            <img
+              src="img/phPhilipKDick.jpeg"
+              alt=""
+              class="main__card__image | card-img-top"
+            />
+            <p class="main__card__text | card-text">
+              "La humanidad de su atención es para destacar, que importante fue para mí pasar por algo dificil como una enfermedad y sentirme apoyado en mis prestadores de salud" <strong>-P.K. Dick</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
 
       <!-- Pie de sitio -->
       <footer class="footer">
         <ul class="footer__list">
-          <li class="footer__list__element"><a href="views/servicios.html">SERVICIOS</a></li>
-          <li class="footer__list__element"><a href="views/contacto.html">CONTACTENOS</a></li>
-          <li class="footer__list__element"><a href="views/nosotros.html">NOSOTROS</a></li>
-          <li class="footer__list__element"><a href="views/contacto.html">TRABAJE CON NOSOTROS</a></li>
-          <li class="footer__list__element"><a href="views/nosotros.html">LEGAL</a></li>
+          <li class="footer__list__element">
+            <a href="views/servicios.html">SERVICIOS</a>
+          </li>
+          <li class="footer__list__element">
+            <a href="views/contacto.html">CONTACTENOS</a>
+          </li>
+          <li class="footer__list__element">
+            <a href="views/nosotros.html">NOSOTROS</a>
+          </li>
+          <li class="footer__list__element">
+            <a href="views/contacto.html">TRABAJE CON NOSOTROS</a>
+          </li>
+          <li class="footer__list__element">
+            <a href="views/nosotros.html">LEGAL</a>
+          </li>
         </ul>
 
         <div class="footer__social">
@@ -258,10 +277,6 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
-    <!-- Scroll reveal -->
-    <script>
-      ScrollReveal().reveal(".footer");
-      ScrollReveal().reveal(".row", { delay: 200 });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

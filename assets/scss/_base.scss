@@ -20,3 +20,56 @@ $colors:(
 @function color ($colorName){
     @return map-get($colors, $colorName )
 }
+
+    
+@mixin banner($color: red, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10vh;
+    box-shadow: 1px 1px 10px gray;
+    &__head {
+      width: 40%;
+      &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__description {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      background-color: $color;
+      width: 100%;
+      text-align: center;
+      padding: 7% 5%;
+    }
+    &__button {
+      background-color: color(element);
+      padding: 1rem 2rem;
+      margin: 1rem 0.5rem;
+      width: auto;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px color(shadow);
+      text-align: center;
+      color: white;
+      &:hover{
+        text-decoration: none;
+        color: whitesmoke;
+      }
+    }
+    @media (max-width: 750px) {
+      flex-flow: row wrap;
+      &__head {
+        height: 30vh;
+        &__image {
+          width: 100vw;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  

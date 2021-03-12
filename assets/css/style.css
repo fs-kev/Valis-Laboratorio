@@ -63,11 +63,8 @@ body .layoutContainer {
   margin: 2em auto;
 }
 
-/* Carousel */
-.carousel__image {
-  width: 100%;
-  height: 70vh;
-  border-radius: 1%;
+.splide {
+  margin: 2em 0;
 }
 
 /* Custom cards */
@@ -84,6 +81,112 @@ body .layoutContainer {
 }
 .main__card--color {
   background-color: white;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10vh;
+  box-shadow: 1px 1px 10px gray;
+}
+.banner__head {
+  width: 40%;
+}
+.banner__head__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner__description {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #bfe7df;
+  width: 100%;
+  text-align: center;
+  padding: 7% 5%;
+}
+.banner__button {
+  background-color: #1f878cac;
+  padding: 1rem 2rem;
+  margin: 1rem 0.5rem;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.179);
+  text-align: center;
+  color: white;
+}
+.banner__button:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+@media (max-width: 750px) {
+  .banner {
+    flex-flow: row wrap;
+  }
+  .banner__head {
+    height: 30vh;
+  }
+  .banner__head__image {
+    width: 100vw;
+    object-fit: cover;
+  }
+}
+
+.banner2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10vh;
+  box-shadow: 1px 1px 10px gray;
+}
+.banner2__head {
+  width: 40%;
+}
+.banner2__head__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner2__description {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #bfe7df;
+  width: 100%;
+  text-align: center;
+  padding: 7% 5%;
+}
+.banner2__button {
+  background-color: #1f878cac;
+  padding: 1rem 2rem;
+  margin: 1rem 0.5rem;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.179);
+  text-align: center;
+  color: white;
+}
+.banner2__button:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+@media (max-width: 750px) {
+  .banner2 {
+    flex-flow: row wrap;
+  }
+  .banner2__head {
+    height: 30vh;
+  }
+  .banner2__head__image {
+    width: 100vw;
+    object-fit: cover;
+  }
 }
 
 /* Cajas servicios */
